@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        .list-group li a {
+            font-size: 15px;
+        }
+
+        .linkSlider .slick-track {
+            width: 100% !important;
+        }
+
+        .linkSlider p {
+            width: 80px !important;
+            height: 50px;
+            line-height: 42px;
+        }
+
+        .bottom-clo.on {
+            border-bottom: 3px solid #da251c;
+        }
+
+        .bottom-clo {
+            font-size: 22px !important;
+            padding-bottom: 1rem;
+            border-bottom: 3px solid #fff;
+            margin-right: 1.5rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            width: 4em;
+            color: #000 !important;
+            font-weight: bold;
+        }
+
+        .m-news-list dl dd span {
+            line-height: 36px;
+            height: 42px;
+            overflow: hidden;
+            display: block;
+        }
+
+        .m-news-list dl dd p {
+            display: inline-block;
+            width: 100%;
+            height: 22px;
+        }
+
+        @media (min-width: 1200px) {
+            .nth-col {
+                width: 31.333333%;
+            }
+
+            .nth-col-2 {
+                width: 31.333333%;
+                margin-right: 2rem;
+                margin-left: 2rem;
+            }
+        }
+
+        .m-contactBox {
+            margin-top: 80px;
+        }
+    </style>
+    {{ template "header" .}}
+</head>
+
+<body>
+<div class="header pr">
+    <div class="had_top container">
+        <div class="logo pr col-lg-4 col-md-4 col-sm-3 col-xs-6  animated fadeInLeft "><a href="http://www.sxwlgyl.com/"><img class="imgMax pa"
+                                                                                                                              src="/template/pc/img/f7de82c8f9ecf101485ca139bbba14d8.png" alt="顺行物流供应链"></a>
+        </div>
+        <div class="menu  rt tr  visible-xs   col-xs-2  animated fadeInRight"><img src="/template/pc/img/menu.png" alt=""></div>
+        <div class="had_rt rt col-lg-8 col-md-8 col-sm-9 col-xs-4 animated fadeInRight">
+            <!--<div class="lang">-->
+            <!--<span class="rt"><a href="javascript:;">中文</a> |-->
+            <!--<a href="javascript:;">EN</a></span>-->
+            <!--</div>-->
+            <div class="ser hidden-xs">
+                <p class="hotLine"><img src="/template/pc/img/tell.png" alt=""><b>全国服务热线 : </b><em>13602548980
+                        18926447891</em></p>
+                <form method="get" class="serForm" action="/index.php?m=home&c=Search&a=lists" name="search">
+                    <input type="hidden" name="m" value="home"/><input type="hidden" name="c" value="Search"/><input type="hidden" name="a" value="lists"/><input type="hidden" name="lang" value="cn"/>
+                    <input type="submit" value="" class="input-ser">
+                    <input type="text" name="keywords" placeholder="请输入关键字" class="input-txt">
+                    <input type="submit" class="input-sub" value="搜索">
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="nav pr hidden-xs animated zoomIn">
+        <div class="container">
+            <ul class="nav_list ">
+                <li class="current"><a href="http://www.sxwlgyl.com/">首页</a></li>
+                <li><a href="/fuwuxiangmu/">服务项目</a>
+                    <ul class="navChild">
+                        <li><a href="/guoneiluyun/"> 国内陆运</a></li>
+                        <li><a href="/wuliubanjia/">物流搬家</a></li>
+                        <li><a href="/dajianyunshu/">大件运输</a></li>
+                        <li><a href="/gongchengxiangmuwuliu158/">工程项目物流</a></li>
+                        <li><a href="/gongyinglianguanli/">供应链管理</a></li>
+                        <li><a href="/huoyunbaoxian/">货运保险</a></li>
+                        <li><a href="/gongchangqiyebanqian/">工厂企业搬迁</a></li>
+                        <li><a href="/hangkongyunshu/"> 航空运输</a></li>
+                        <li><a href="/huotidongwuyunshu/">活体动物运输</a></li>
+                        <li><a href="/shengxianlinglianwuliu/">生鲜冷链物流</a></li>
+                        <li><a href="/gongchengxiangmuwuliu/">国际物流</a></li>
+                    </ul>
+                </li>
+                <li><a href="/wuliuxianlu/">物流线路</a></li>
+                <li><a href="/gongsiyunli/">公司运力</a></li>
+                <li><a href="/xinwenzhongxin/">新闻中心</a>
+                    <ul class="navChild">
+                        <li><a href="/gongsixinwen/">公司新闻</a></li>
+                        <li><a href="/xingyexinwen/">行业新闻</a></li>
+                    </ul>
+                </li>
+                <li><a href="/shehuizheren/">社会责任</a></li>
+                <li><a href="/guanyuwomen/">关于我们</a>
+                    <ul class="navChild">
+                        <li><a href="/gongsijianjie/">公司简介</a></li>
+                        <li><a href="/gongsizhanshi/">公司展示</a></li>
+                        <li><a href="/gongsiyoushi/">公司优势</a></li>
+                        <li><a href="/qiyewenhua/">企业文化</a></li>
+                        <li><a href="/gongsizhanghu/">公司账户</a></li>
+                    </ul>
+                </li>
+                <li><a href="/lianxiwomen/">联系我们</a>
+                    <ul class="navChild">
+                        <li><a href="/lianxifangshi/">联系方式</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="banner animated fadeInLeft">
+    <div class="banSlider slider">
+        <div><a href="http://www.sxwlgyl.com/fuwuxiangmu/"><img class="imgMax" src="/template/pc/img/1-201215104456153.png" alt="物流公司"></a></div>
+        <div><a href="http://www.sxwlgyl.com/wuliuluxian/"><img class="imgMax" src="/template/pc/img/1-20121510462L17.png" alt="深圳物流公司"></a></div>
+        <div><a href="http://www.sxwlgyl.com/guanyuwomen/"><img class="imgMax" src="/template/pc/img/1-201214113U4D9.jpg" alt="货运公司"></a></div>
+    </div>
+</div>
+<div class="link-txt">关键词：<a href="#" style="color: #999;padding-right: 15px;">深圳物流专线</a><a href="#"
+                                                                                            style="color: #999;padding-right: 15px;">深圳货运</a><a href="#"
+                                                                                                                                                style="color: #999;padding-right: 15px;">深圳物流</a><a
+            href="#"
+            style="color: #999;padding-right: 15px;">深圳货运公司</a><a href="#"
+                                                                  style="color: #999;padding-right: 15px;">深圳货运专线</a><a href="#"
+                                                                                                                        style="color: #999;padding-right: 15px;">深圳物流公司</a><a href="#"
+                                                                                                                                                                              style="color: #999;padding-right: 15px;">深圳物流整车</a><a
+            href="#"
+            style="color: #999;padding-right: 15px;">深圳物流包车</a><a href="#"
+                                                                  style="color: #999;padding-right: 15px;">深圳货运专车</a><a href="#"
+                                                                                                                        style="color: #999;padding-right: 15px;">深圳物流搬家</a> <a href="#"
+                                                                                                                                                                               style="color: #999;padding-right: 15px;">东莞物流专线</a>
+    <a href="#"
+       style="color: #999;padding-right: 15px;">东莞货运</a> <a href="#"
+                                                            style="color: #999;padding-right: 15px;">东莞物流</a></div>
+<div class="main">
+    <div class="m-business ">
+        <div class="m-title container tc pr animated fadeInLeft wow">
+            <h3>PRODUCT CENTER</h3>
+            <span>服务项目</span>
+            <p>经营仓储物流、仓库配送、整车运输、汽车托运等业务,公司将全力以赴,立足深圳,不断开拓珠三角的国内物流</p>
+        </div>
+        <div class="business-cont oh">
+            <dl class="col-lg-4 col-md-4 col-sm-4 col-xs-6 three animated fadeInRight wow">
+                <dt><a href="/guoneiluyun/"> <img src="/template/pc/img/1-201214142536127.png" alt=" 国内陆运"></a></dt>
+                <dd>
+                    <h3> 国内陆运</h3>
+                    <p>国际陆运、30年品质-更低的物流价格，更专业的物流服务，国内陆运,整车,零担,仓储与配送</p>
+                    <a href="/guoneiluyun/">More</a>
+                </dd>
+            </dl>
+            <dl class="col-lg-4 col-md-4 col-sm-4 col-xs-6 three animated fadeInRight wow">
+                <dt><a href="/wuliubanjia/"> <img src="/template/pc/img/1-201214142S2347.png" alt="物流搬家"></a></dt>
+                <dd>
+                    <h3>物流搬家</h3>
+                    <p>物流搬家、长途搬家费用、附近搬家公司电话、公司搬家服务、附近搬家公司、搬运公司、长途搬家公司、物流公司电话、货运公司、搬家公司、搬家电话</p>
+                    <a href="/wuliubanjia/">More</a>
+                </dd>
+            </dl>
+            <dl class="col-lg-4 col-md-4 col-sm-4 col-xs-6 three animated fadeInRight wow">
+                <dt><a href="/dajianyunshu/"> <img src="/template/pc/img/1-201214143255622.png" alt="大件运输"></a></dt>
+                <dd>
+                    <h3>大件运输</h3>
+                    <p>精于大件设备运输、运输大件货物、拥有大件运输专线，靠谱的大件运输公司，超过10年服务经验</p>
+                    <a href="/dajianyunshu/">More</a>
+                </dd>
+            </dl>
+            <dl class="col-lg-4 col-md-4 col-sm-4 col-xs-6 three animated fadeInRight wow">
+                <dt><a href="/gongchengxiangmuwuliu158/"> <img src="/template/pc/img/1-20121414395WZ.png" alt="工程项目物流"></a></dt>
+                <dd>
+                    <h3>工程项目物流</h3>
+                    <p>个性化定制物流方案,实施运输计划,提供综合物流服务</p>
+                    <a href="/gongchengxiangmuwuliu158/">More</a>
+                </dd>
+            </dl>
+            <dl class="col-lg-4 col-md-4 col-sm-4 col-xs-6 three animated fadeInRight wow">
+                <dt><a href="/gongyinglianguanli/"> <img src="/template/pc/img/1-201214144204N1.png" alt="供应链管理"></a></dt>
+                <dd>
+                    <h3>供应链管理</h3>
+                    <p>供应链综合物流企业，提供仓干配一体化服务，核心竞争力在于解决系列物流、运输问题 ，供应链贸易企业，提供前端采购、后端渠道类分销的贸易执行服务，供应链咨询企业，提供解决方案、综合咨询服务，核心竞争力在于为客户提供供应链解决方案的咨询服务</p>
+                    <a href="/gongyinglianguanli/">More</a>
+                </dd>
+            </dl>
+            <dl class="col-lg-4 col-md-4 col-sm-4 col-xs-6 three animated fadeInRight wow">
+                <dt><a href="/huoyunbaoxian/"> <img src="/template/pc/img/d76ade467de2c2554fbf97644ba665b9.png" alt="货运保险"></a></dt>
+                <dd>
+                    <h3>货运保险</h3>
+                    <p>货物运输保险就找深圳市货运保险代理有限公司进出口货运保险网,专业海运保险,物流保险,平安货运保险是网上投保权威服务机构,为你提供全面的物流保险</p>
+                    <a href="/huoyunbaoxian/">More</a>
+                </dd>
+            </dl>
+        </div>
+    </div>
+    <div class="m-about">
+        <div class="m-title container tc pr animated fadeInLeft wow">
+            <h3>ABOUT US</h3>
+            <span>关于我们</span>
+            <p>深圳物流行业排名前十的深圳物流公司，树立物流行业品牌企业，优质物流服务。</p>
+        </div>
+        <div class="about-cont container">
+            <dl>
+                <dt class="col-lg-6 col-md-6 col-sm-6 col-xs-12 animated fadeInLeft wow"><a
+                            href="/guanyuwomen/">
+                        <img class="imgMax"
+                             src="/template/pc/img/86df38bb2f1771faa6c28bfdee8d973b.jpg"/></a></dt>
+                <dd class="col-lg-6 col-md-6 col-sm-6 col-xs-12 animated  fadeInRight wow">
+                    <h3>顺行物流供应链</h3>
+                    <div> &nbsp; &nbsp; &nbsp;
+                        深圳市顺行物流供应链管理有限公司是国内综合性物流公共交易服务平台。公司采取“物流供应链+互联网”的模式，致力于给客户提供更加精准、更快捷、更加可靠的物流服务。而利用云计算、大数据、物联网等IT技术与手段，公司为用户打造了一个线上物流电商平台，并将“托运方、第三方物流公司、司机、收货人”整合到平台当中，从订单的分配到流程作业的全程协同，实现了物流服务各环节的线上互联，完成了线上交易管理、线下运输服务的有效互通。&nbsp;
+                        &...
+                    </div>
+                    <a href="/guanyuwomen/" class="more">VIEW MORE</a>
+                </dd>
+            </dl>
+        </div>
+    </div>
+    <div class="m-news">
+        <div class="m-newsBg">
+            <div class="m-title container tc pr animated fadeInRight wow">
+                <h3>NEWS CENTER</h3>
+                <span>新闻中心</span>
+                <p>顺行物流专业为客户提供零担物流、整车运输、大件运输、长途搬家、货运保险等一站式物流运输服务。以丰富的经验提供专业满意的服务。</p>
+            </div>
+        </div>
+        <div class="m-newsContBox container animated fadeInLeft wow">
+            <div class="news-content ">
+                <div class="m-news-list">
+                    <dl class="col-lg-4 col-md-4 col-sm-4 col-xs-12 nth-col" style="border: 1px solid #bcbcbc;">
+                        <dd>
+                            <h2><span class="bottom-clo on">物流线路</span></h2>
+                            <p><a href="/wuliuxianlu/451.html">深圳到新乡物流专线</a></p>
+                            <p><a href="/wuliuxianlu/450.html">深圳到信阳物流专线</a></p>
+                            <p><a href="/wuliuxianlu/449.html">深圳到洛阳物流专线</a></p>
+                            <p><a href="/wuliuxianlu/448.html">深圳到南阳物流专线直达</a></p>
+                            <p><a href="/wuliuxianlu/447.html">深圳到周口物流专线</a></p>
+                            <p><a href="/wuliuxianlu/446.html">深圳到郑州物流专线</a></p>
+                            <p><a href="/wuliuxianlu/423.html">深圳到茅台物流专线</a></p>
+                        </dd>
+                    </dl>
+                    <dl class="col-lg-4 col-md-4 col-sm-4 col-xs-12 nth-col-2" style="border: 1px solid #bcbcbc;">
+                        <dd>
+                            <h2><span class="bottom-clo on">热门线路</span></h2>
+                            <p><a href="/wuliuxianlu/422.html">深圳到安顺物流专线</a></p>
+                            <p><a href="/wuliuxianlu/421.html">深圳到盘州物流专线</a></p>
+                            <p><a href="/wuliuxianlu/420.html">深圳到六盘水物流专线</a></p>
+                            <p><a href="/wuliuxianlu/419.html">深圳到遵义物流专线</a></p>
+                            <p><a href="/wuliuxianlu/418.html">深圳到仁怀物流专线</a></p>
+                            <p><a href="/wuliuxianlu/412.html">深圳到揭东物流专线</a></p>
+                            <p><a href="/wuliuxianlu/411.html">深圳到揭西物流公司</a></p>
+                        </dd>
+                    </dl>
+                    <dl class="col-lg-4 col-md-4 col-sm-4 col-xs-12 nth-col" style="border: 1px solid #bcbcbc;">
+                        <dd>
+                            <h2><span class="bottom-clo on">物流车队</span></h2>
+                            <p><a href="/wuliuxianlu/410.html">深圳到普宁物流专线</a></p>
+                            <p><a href="/wuliuxianlu/409.html">深圳到惠来物流专线</a></p>
+                            <p><a href="/wuliuxianlu/408.html">深圳到揭阳物流专线直达</a></p>
+                            <p><a href="/wuliuxianlu/385.html">深圳到龙南物流专线</a></p>
+                            <p><a href="/wuliuxianlu/384.html">深圳到于都物流专线</a></p>
+                            <p><a href="/wuliuxianlu/383.html">深圳到石城物流专线</a></p>
+                            <p><a href="/wuliuxianlu/382.html">深圳到南康物流专线</a></p>
+                        </dd>
+                    </dl>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                    <div class="bd1">
+                        <ul class="list-group">
+                            <li><span class="fr badge">02-24</span><a style=""
+                                                                      href="/gongsixinwen/341.html" target="_blank" title="">惠州到淮北货运包车运输</a></li>
+                            <li><span class="fr badge">02-24</span><a style=""
+                                                                      href="/gongsixinwen/340.html" target="_blank" title="">惠州到芜湖直达专线物流货运</a></li>
+                            <li><span class="fr badge">02-19</span><a style=""
+                                                                      href="/gongsixinwen/307.html" target="_blank" title="">惠州到宝鸡货运公司电话</a></li>
+                            <li><span class="fr badge">02-19</span><a style=""
+                                                                      href="/gongsixinwen/306.html" target="_blank" title="">惠州到西安物流货运包车价格</a></li>
+                            <li><span class="fr badge">02-08</span><a style=""
+                                                                      href="/gongsixinwen/301.html" target="_blank" title="">惠州到松原货运专线物流直达</a></li>
+                            <li><span class="fr badge">02-08</span><a style=""
+                                                                      href="/gongsixinwen/300.html" target="_blank" title="">惠州到延边物流包车货运直达</a></li>
+                            <li><span class="fr badge">02-08</span><a style=""
+                                                                      href="/gongsixinwen/299.html" target="_blank" title="">惠州到白城物流货运公司电话</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                    <div class="bd1">
+                        <ul class="list-group">
+                            <li><span class="fr badge">05-16</span><a style=""
+                                                                      href="/xingyexinwen/457.html" target="_blank" title="">物流公司想要突破，网络货运是必经之路</a></li>
+                            <li><span class="fr badge">05-16</span><a style=""
+                                                                      href="/xingyexinwen/456.html" target="_blank" title="">日本货运航空公司谎报机体损伤状况 问题飞机曾继续运航</a></li>
+                            <li><span class="fr badge">05-16</span><a style=""
+                                                                      href="/xingyexinwen/455.html" target="_blank" title="">全球物流公司排名出炉顺丰京东意外落选，榜首的规模是顺丰40倍</a></li>
+                            <li><span class="fr badge">05-12</span><a style=""
+                                                                      href="/xingyexinwen/454.html" target="_blank" title="">知名电商物流遭遇“内鬼”！售后快递频频被盗，北京民警出手擒贼</a></li>
+                            <li><span class="fr badge">05-12</span><a style=""
+                                                                      href="/xingyexinwen/453.html" target="_blank" title="">粮食物流行业市场现状分析，新型粮食物流体系建设成行业发展趋势</a></li>
+                            <li><span class="fr badge">05-12</span><a style=""
+                                                                      href="/xingyexinwen/452.html" target="_blank" title="">传京东物流计划5月中旬启动招股，估值超2000亿元</a></li>
+                            <li><span class="fr badge">05-01</span><a style=""
+                                                                      href="/xingyexinwen/445.html" target="_blank" title="">对航空货运公司跨境电商业务模式的思考</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="m-news-more"><a href="/xinwenzhongxin/">VIEW MORE</a></div>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="m-map animated fadeInRight wow">
+<div style="width:100%;height:540px;border:#ccc solid 1px;" id="dituContent"></div>
+</div> -->
+    <div class="m-contactBox container animated fadeInLeft wow">
+        <div class="m-contact ">
+            <div class="m-title  tc pr">
+                <h3>CONTACT US</h3>
+                <span>联系我们</span>
+                <p>顺行物流专业为客户提供零担物流、整车运输、大件运输、长途搬家、货运保险等一站式物流运输服务。以丰富的经验提供专业满意的服务。</p>
+            </div>
+            <div class="m-contact-cont">
+                <ul class="contact-list">
+                    <li class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                        <div> <span class="lt">邮箱<br>
+                                    Email</span> <img class="rt"
+                                                      src="/template/pc/img/contact1.png" alt=""></div>
+                        <p>1376093842@qq.com</p>
+                    </li>
+                    <li class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                        <div> <span class="lt">电话<br>
+                                    Telephone</span> <img class="rt"
+                                                          src="/template/pc/img/contact2.png" alt=""></div>
+                        <p>13602548980
+                            18926447891</p>
+                    </li>
+                    <li class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                        <div> <span class="lt">地址<br>
+                                    Address</span> <img class="rt"
+                                                        src="/template/pc/img/contact3.png" alt=""></div>
+                        <p>深圳市龙岗区南湾街道沙平北路530号东兴源大厦601</p>
+                    </li>
+                </ul>
+                <form action="/index.php?m=home&c=Lists&a=gbook_submit&lang=cn" enctype="multipart/form-data" class="contact-mes" method="post"
+                      onsubmit="return checkForm();">
+                    <ul class="contact-input col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <li>
+                            <input type="text" id="attr_1" name="attr_1" value=""
+                                   placeholder="姓名">
+                        </li>
+                        <li>
+                            <input type="text" id="attr_2" name="attr_2" value=""
+                                   placeholder="公司名称">
+                        </li>
+                        <li>
+                            <input type="text" id="attr_3" name="attr_3" value=""
+                                   placeholder="手机号码">
+                        </li>
+                    </ul>
+                    <textarea class="col-lg-6 col-md-6 col-sm-6 col-xs-12" id="attr_4" name="attr_4"
+                              value="" placeholder="留言内容"></textarea>
+                    <button type="submit" class="contact-sub">提交</button>
+                    <input type="hidden" name="gourl" id="gourl_29aaa9ee43490865311036a0428461bd" value="http://www.sxwlgyl.com"/><input type="hidden" name="typeid" value="12"/><input type="hidden"
+                                                                                                                                                                                        name="__token__29aaa9ee43490865311036a0428461bd"
+                                                                                                                                                                                        id="29aaa9ee43490865311036a0428461bd"
+                                                                                                                                                                                        value=""/>
+                    <script type="text/javascript">
+                        function submit29aaa9ee43490865311036a0428461bd(elements) {
+                            if (document.getElementById('gourl_29aaa9ee43490865311036a0428461bd')) {
+                                document.getElementById('gourl_29aaa9ee43490865311036a0428461bd').value = window.location.href;
+                            }
+
+
+                            elements.submit();
+                        }
+
+                        function ey_fleshVerify(id) {
+                            var src = "/index.php?m=api&c=Ajax&a=vertify&type=guestbook&lang=cn";
+                            src += "&r=" + Math.floor(Math.random() * 100);
+                            document.getElementById(id).src = src;
+                        }
+
+                        function fb839f35141008d3445071eddba9f4669() {
+                            //步骤一:创建异步对象
+                            var ajax = new XMLHttpRequest();
+                            //步骤二:设置请求的url参数,参数一是请求的类型,参数二是请求的url,可以带参数,动态的传递参数starName到服务端
+                            ajax.open("post", "/index.php?m=api&c=Ajax&a=get_token&name=__token__29aaa9ee43490865311036a0428461bd", true);
+                            // 给头部添加ajax信息
+                            ajax.setRequestHeader("X-Requested-With", "XMLHttpRequest");
+                            // 如果需要像 HTML 表单那样 POST 数据，请使用 setRequestHeader() 来添加 HTTP 头。然后在 send() 方法中规定您希望发送的数据：
+                            ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+                            //步骤三:发送请求+数据
+                            ajax.send('_ajax=1');
+                            //步骤四:注册事件 onreadystatechange 状态改变就会调用
+                            ajax.onreadystatechange = function () {
+                                //步骤五 如果能够进到这个判断 说明 数据 完美的回来了,并且请求的页面是存在的
+                                if (ajax.readyState == 4 && ajax.status == 200) {
+                                    document.getElementById("29aaa9ee43490865311036a0428461bd").value = ajax.responseText;
+                                }
+                            }
+                        }
+
+                        fb839f35141008d3445071eddba9f4669();
+
+                        function getNext1598839807(id, name, level) {
+                            var input = document.getElementById('attr_' + name);
+                            var first = document.getElementById('first_id_' + name);
+                            var second = document.getElementById('second_id_' + name);
+                            var third = document.getElementById('third_id_' + name);
+                            var findex = '', fvalue = '', sindex = '', svalue = '', tindex = '', tvalue = '', value = '';
+
+                            if (level == 1) {
+                                if (second) {
+                                    second.style.display = 'none';
+                                    second.innerHTML = '';
+                                }
+                                if (third) {
+                                    third.style.display = 'none';
+                                    third.innerHTML = '';
+                                }
+                                findex = first.selectedIndex;
+                                fvalue = first.options[findex].value;
+                                input.value = fvalue;
+                                value = fvalue;
+                            } else if (level == 2) {
+                                if (third) {
+                                    third.style.display = 'none';
+                                    third.innerHTML = '';
+                                }
+                                findex = first.selectedIndex;
+                                fvalue = first.options[findex].value;
+                                sindex = second.selectedIndex;
+                                svalue = second.options[sindex].value;
+                                if (svalue) {
+                                    input.value = fvalue + ',' + svalue;
+                                    value = svalue;
+                                } else {
+                                    input.value = fvalue;
+                                }
+                            } else if (level == 3) {
+                                findex = first.selectedIndex;
+                                fvalue = first.options[findex].value;
+                                sindex = second.selectedIndex;
+                                svalue = second.options[sindex].value;
+                                tindex = third.selectedIndex;
+                                tvalue = third.options[tindex].value;
+                                if (tvalue) {
+                                    input.value = fvalue + ',' + svalue + ',' + tvalue;
+                                    value = tvalue;
+                                } else {
+                                    input.value = fvalue + ',' + svalue;
+                                }
+                            }
+                            if (value) {
+                                if (document.getElementById(id)) {
+                                    document.getElementById(id).options.add(new Option('请选择', ''));
+                                    var ajax = new XMLHttpRequest();
+                                    //步骤二:设置请求的url参数,参数一是请求的类型,参数二是请求的url,可以带参数,动态的传递参数starName到服务端
+                                    ajax.open("post", "/index.php?m=api&c=Ajax&a=get_region&pid=" + value, true);
+                                    // 给头部添加ajax信息
+                                    ajax.setRequestHeader("X-Requested-With", "XMLHttpRequest");
+                                    // 如果需要像 HTML 表单那样 POST 数据，请使用 setRequestHeader() 来添加 HTTP 头。然后在 send() 方法中规定您希望发送的数据：
+                                    ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+                                    //步骤三:发送请求+数据
+                                    ajax.send('_ajax=1');
+                                    //步骤四:注册事件 onreadystatechange 状态改变就会调用
+                                    ajax.onreadystatechange = function () {
+                                        //步骤五 如果能够进到这个判断 说明 数据 完美的回来了,并且请求的页面是存在的
+                                        if (ajax.readyState == 4 && ajax.status == 200) {
+                                            var data = JSON.parse(ajax.responseText).data;
+                                            if (data) {
+                                                data.forEach(function (item) {
+                                                    document.getElementById(id).options.add(new Option(item.name, item.id));
+                                                    document.getElementById(id).style.display = "block";
+
+                                                });
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    </script>
+                </form>
+                <script type="text/javascript">
+                    function checkForm() {
+                        if (document.getElementById('attr_1').value.length == 0) {
+                            alert('请输入您的姓名');
+                            return false;
+                        }
+                        if (document.getElementById('attr_3').value.length == 0) {
+                            alert('请输入您的手机号码');
+                            return false;
+                        }
+
+                        return true;
+                    }
+                </script>
+            </div>
+        </div>
+    </div>
+    <div class="m-link animated fadeInRight wow">
+        <div class="link-cont container">
+            <p style="float: left;">友情链接：</p>
+            <a style="float: left;" href="http://www.sxwlgyl.com/" target="_blank">深圳物流专线</a>
+            <a style="float: left;" href="http://www.sxwlgyl.com/" target="_blank">深圳货运</a>
+            <a style="float: left;" href="http://www.sxwlgyl.com/" target="_blank">深圳物流</a>
+            <a style="float: left;" href="http://www.sxwlgyl.com/" target="_blank">深圳货运公司</a>
+            <a style="float: left;" href="http://www.sxwlgyl.com/" target="_blank">深圳货运专线</a>
+            <a style="float: left;" href="http://www.sxwlgyl.com/" target="_blank">深圳物流公司</a>
+            <a style="float: left;" href="http://www.sxwlgyl.com/" target="_blank">深圳物流整车</a>
+            <a style="float: left;" href="http://www.sxwlgyl.com/" target="_blank">深圳物流包车</a>
+            <a style="float: left;" href="http://www.sxwlgyl.com/" target="_blank">深圳货运专车</a>
+            <a style="float: left;" href="http://www.sxwlgyl.com/" target="_blank">深圳物流搬家</a>
+            <a style="float: left;" href="http://www.sxwlgyl.com/" target="_blank">深圳公司搬迁</a>
+            <a style="float: left;" href="http://www.sxwlgyl.com/" target="_blank">深圳大件运输</a>
+            <a style="float: left;" href="http://www.sxwlgyl.com/" target="_blank">深圳物流直达</a>
+            <a style="float: left;" href="http://www.sxwlgyl.com/" target="_blank">专线物流货运公司</a>
+            <a style="float: left;" href="http://www.sxwlgyl.com/guanyuwomen/" target="_blank">物流货运公司</a>
+            <a style="float: left;" href="http://www.sxwlgyl.com/wuliuxianlu/" target="_blank">深圳到天津物流专线</a>
+            <a style="float: left;" href="http://www.sxwlgyl.com/" target="_blank">货运搬家公司</a>
+            <a style="float: left;" href="http://www.sxwlgyl.com/" target="_blank">深圳到上海物流专线</a>
+            <a style="float: left;" href="http://www.sxwlgyl.com/" target="_blank">物流搬家公司</a>
+            <a style="float: left;" href="http://www.sxwlgyl.com/" target="_blank">货运物流专线</a>
+            <a style="float: left;" href="http://www.sxwlgyl.com/" target="_blank">深圳货运物流公司</a>
+        </div>
+    </div>
+</div>
+
+<!--手机侧边导航-->
+{{ template "footer" .}}
+<!-- 应用插件标签 start -->
+
+<!-- 应用插件标签 end -->
+<script> var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?8993e2f43e5a0cf45f662a7972e34ed8";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })(); </script>
+<script type="text/javascript">
+    //创建和初始化地图函数：
+    function initMap() {
+        createMap(); //创建地图
+        setMapEvent(); //设置地图事件
+        addMapControl(); //向地图添加控件
+        addMarker(); //向地图中添加marker
+    }
+
+    //创建地图函数：
+    function createMap() {
+        var map = new BMap.Map("dituContent"); //在百度地图容器中创建一个地图
+        var point = new BMap.Point(114.163407, 22.637766); //定义一个中心点坐标
+        map.centerAndZoom(point, 18); //设定地图的中心点和坐标并将地图显示在地图容器中
+        window.map = map; //将map变量存储在全局
+    }
+
+    //地图事件设置函数：
+    function setMapEvent() {
+        map.enableDragging(); //启用地图拖拽事件，默认启用(可不写)
+        map.enableScrollWheelZoom(); //启用地图滚轮放大缩小
+        map.enableDoubleClickZoom(); //启用鼠标双击放大，默认启用(可不写)
+        map.enableKeyboard(); //启用键盘上下左右键移动地图
+    }
+
+    //地图控件添加函数：
+    function addMapControl() {
+        //向地图中添加缩放控件
+        var ctrl_nav = new BMap.NavigationControl({
+            anchor: BMAP_ANCHOR_TOP_LEFT,
+            type: BMAP_NAVIGATION_CONTROL_LARGE
+        });
+        map.addControl(ctrl_nav);
+        //向地图中添加缩略图控件
+        var ctrl_ove = new BMap.OverviewMapControl({
+            anchor: BMAP_ANCHOR_BOTTOM_RIGHT,
+            isOpen: 1
+        });
+        map.addControl(ctrl_ove);
+        //向地图中添加比例尺控件
+        var ctrl_sca = new BMap.ScaleControl({
+            anchor: BMAP_ANCHOR_BOTTOM_LEFT
+        });
+        map.addControl(ctrl_sca);
+    }
+
+    //创建marker
+    function addMarker() {
+        for (var i = 0; i < markerArr.length; i++) {
+            var json = markerArr[i];
+            var p0 = json.point.split("|")[0];
+            var p1 = json.point.split("|")[1];
+            var point = new BMap.Point(p0, p1);
+            var iconImg = createIcon(json.icon);
+            var marker = new BMap.Marker(point, {
+                icon: iconImg
+            });
+            var iw = createInfoWindow(i);
+            var label = new BMap.Label(json.title, {
+                "offset": new BMap.Size(json.icon.lb - json.icon.x + 10, -20)
+            });
+            marker.setLabel(label);
+            map.addOverlay(marker);
+            label.setStyle({
+                borderColor: "#808080",
+                color: "#333",
+                cursor: "pointer"
+            });
+
+            (function () {
+                var index = i;
+                var _iw = createInfoWindow(i);
+                var _marker = marker;
+                _marker.addEventListener("click", function () {
+                    this.openInfoWindow(_iw);
+                });
+                _iw.addEventListener("open", function () {
+                    _marker.getLabel().hide();
+                })
+                _iw.addEventListener("close", function () {
+                    _marker.getLabel().show();
+                })
+                label.addEventListener("click", function () {
+                    _marker.openInfoWindow(_iw);
+                })
+                if (!!json.isOpen) {
+                    label.hide();
+                    _marker.openInfoWindow(_iw);
+                }
+            })()
+        }
+    }
+
+    //创建InfoWindow
+    function createInfoWindow(i) {
+        var json = markerArr[i];
+        var iw = new BMap.InfoWindow("<b class='iw_poi_title' title='" + json.title + "'>" + json.title +
+            "</b><div class='iw_poi_content'>" + json.content + "</div>");
+        return iw;
+    }
+
+    //创建一个Icon
+    function createIcon(json) {
+        var icon = new BMap.Icon("http://app.baidu.com/map/images/us_mk_icon.png", new BMap.Size(json.w, json.h), {
+            imageOffset: new BMap.Size(-json.l, -json.t),
+            infoWindowOffset: new BMap.Size(json.lb + 5, 1),
+            offset: new BMap.Size(json.x, json.h)
+        })
+        return icon;
+    }
+
+    initMap(); //创建和初始化地图
+</script>
+</body>
+</html>
